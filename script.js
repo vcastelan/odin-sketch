@@ -1,5 +1,14 @@
-// create 16x16 divs on the parent div container
+//add a button that will open popup(prompt) asking user for size of new grid.
+// add a grid continaer to select grid size.
+const change = document.querySelector('#change');
+const clear = document.querySelector('#clear')
 const gridContainer = document.querySelector('.grid-container');
+
+// use a button on html then javascript to add click event.
+// upon load grid container default.
+change.addEventListener('click', changeSize);
+clear.addEventListener('click', clearGrid);
+window.addEventListener('load', setDefaultGrid);
 
 function makeRows(rows, cols) {
   gridContainer.style.setProperty('--grid-rows', rows);
@@ -11,9 +20,7 @@ function makeRows(rows, cols) {
 }
 
 function setDefaultGrid() {
-  makeRows(32,32);
-  // setGridSize(32);
-  // fillGrid(32);
+  makeRows(16,16);
 }
 
 function changeSize() {
@@ -25,23 +32,25 @@ function changeSize() {
       alert("Enter a number from 1-64 range");
       changeSize();
     } else {
+      clearGrid();
       makeRows(newSize, newSize);
-      // setGridSize(newSize);
-      // fillGrid(newSize);
     }
   } else if(newSize === null) {
+    clearGrid();
     setDefaultGrid();
   }
 }
 
-// setDefaultGrid();
-changeSize();
+function clearGrid() {
+  const gridArray = Array.from(gridContainer.childNodes);
+  gridArray.forEach((element) => {
+    gridContainer.removeChild(element);
+  });
+}
 
 // add a hover effect using a hover on DOM grid elements
 //change the div class to a new div and then change the color of that div opposite original color
 
-//add a button that will open popup(prompt) asking user for size of new grid.
-// use a button on html then javascript to add click event.
 
 
 // function setGridSize(size) {
