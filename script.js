@@ -7,7 +7,7 @@ const gridContainer = document.querySelector('.grid-container');
 // use a button on html then javascript to add click event.
 // upon load grid container default.
 change.addEventListener('click', changeSize);
-clear.addEventListener('click', clearGrid);
+clear.addEventListener('click', eraseAllColor);
 window.addEventListener('load', setDefaultGrid);
 
 function makeRows(rows, cols) {
@@ -41,6 +41,7 @@ function changeSize() {
   }
 }
 
+// clear effet to erase all eventual box div colors.
 function clearGrid() {
   const gridArray = Array.from(gridContainer.childNodes);
   gridArray.forEach((element) => {
@@ -48,26 +49,10 @@ function clearGrid() {
   });
 }
 
+
 // add a hover effect using a hover on DOM grid elements
 //change the div class to a new div and then change the color of that div opposite original color
-
-
-
-// function setGridSize(size) {
-//   // gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-//   for (let i = 0; i < size * size; i++) {
-//     const gridElement = document.createElement("div");
-//     gridElement.classList = "grid-element";
-//     // gridElement.addEventListener("mouseover", changeColor);
-//     gridContainer.appendChild(gridElement);
-//   }
-// }
-
-// function fillGrid(size) {
-//   for (let i = 0; i < size * size; i++) {
-//     const gridElement = document.createElement("div");
-//     gridElement.classList = "grid-element";
-//     // gridElement.addEventListener("mouseover", changeColor);
-//     gridContainer.appendChild(gridElement);
-//   }
-// }
+function eraseAllColor() {
+  var gridPixels = document.querySelectorAll('.color');
+  gridPixels.forEach(gridPixel => gridPixel.style.backgroundColor = '#ededed');
+}
