@@ -28,7 +28,7 @@ function changeSize() {
 
   if (newSize !== null) {
     newSize = parseInt(newSize);
-    if (newSize < 1 || newSize > 64 || Number.isNaN(newSize)) {
+    if (newSize < 1 || newSize > 100 || Number.isNaN(newSize)) {
       alert("Enter a number from 1-64 range");
       changeSize();
     } else {
@@ -48,7 +48,6 @@ function clearGrid() {
     gridContainer.removeChild(element);
   });
 }
-
 
 // add a hover effect using a hover on DOM grid elements
 //change the div class to a new div and then change the color of that div opposite original color
