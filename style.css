@@ -5,11 +5,31 @@
 }
 
 body {
+  background-color: lightgrey;
+}
+
+.header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-  height: 100vh;
+  background-color: cadetblue;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+button {
+  width: 200px;
+  padding: 10px
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .grid-container {
