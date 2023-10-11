@@ -11,29 +11,10 @@ function makeRows(rows, cols) {
 }
 
 function setDefaultGrid() {
-  makeRows(16,16);
+  makeRows(32,32);
   // setGridSize(32);
   // fillGrid(32);
 }
-
-// function setGridSize(size) {
-//   // gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-//   for (let i = 0; i < size * size; i++) {
-//     const gridElement = document.createElement("div");
-//     gridElement.classList = "grid-element";
-//     // gridElement.addEventListener("mouseover", changeColor);
-//     gridContainer.appendChild(gridElement);
-//   }
-// }
-
-// function fillGrid(size) {
-//   for (let i = 0; i < size * size; i++) {
-//     const gridElement = document.createElement("div");
-//     gridElement.classList = "grid-element";
-//     // gridElement.addEventListener("mouseover", changeColor);
-//     gridContainer.appendChild(gridElement);
-//   }
-// }
 
 function changeSize() {
   let newSize = prompt("Enter new size");
@@ -53,4 +34,31 @@ function changeSize() {
   }
 }
 
+// setDefaultGrid();
 changeSize();
+
+// add a hover effect using a hover on DOM grid elements
+//change the div class to a new div and then change the color of that div opposite original color
+
+//add a button that will open popup(prompt) asking user for size of new grid.
+// use a button on html then javascript to add click event.
+
+
+// function setGridSize(size) {
+//   // gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+//   for (let i = 0; i < size * size; i++) {
+//     const gridElement = document.createElement("div");
+//     gridElement.classList = "grid-element";
+//     // gridElement.addEventListener("mouseover", changeColor);
+//     gridContainer.appendChild(gridElement);
+//   }
+// }
+
+// function fillGrid(size) {
+//   for (let i = 0; i < size * size; i++) {
+//     const gridElement = document.createElement("div");
+//     gridElement.classList = "grid-element";
+//     // gridElement.addEventListener("mouseover", changeColor);
+//     gridContainer.appendChild(gridElement);
+//   }
+// }
