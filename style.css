@@ -47,6 +47,9 @@ button {
   border: 1px solid black;
 }
 
+/* .grid-element:hover {
+  background-color: black;
+} */
 /* .grid-container {
   display: flex;
   flex-wrap: wrap;
